@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,185 +7,525 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- google fonts --> 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- google fonts end -->
-
-    <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <!-- bootstrap icons end -->
-
-    <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <!-- favicon end -->
-
 </head>
 <body>
+    <div class="cursor-glow" id="cursor-glow"></div>
     <header>
         <div class="interface">
             <div class="logo">
                 <a href="#">
                     <img src="img/logo.png" alt="Logo Lucas Jaques">
                 </a>
-            </div><!-- logo -->
+            </div>
+
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#specialties">Specialties</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#" data-i18n="nav-home">Home</a></li>
+                    <li><a href="#specialties" data-i18n="nav-specialties">Specialties</a></li>
+                    <li><a href="#about" data-i18n="nav-about">About</a></li>
+                    <li><a href="#sap">SAP</a></li>
+                    <li><a href="#portfolio" data-i18n="nav-projects">Projects</a></li>
                 </ul>
-            </nav><!-- menu-desktop -->
-            <div class="btn-contact">
-                <a href="#form">
-                    <button>Contact</button>
-                </a>
-            </div><!-- btn-contact -->
+            </nav>
 
-            <div class="btn-open-menu" id="btn-menu">
-                <i class="bi bi-list"></i>
+            <div class="header-right">
+                <button class="btn-theme" id="btn-theme" aria-label="Toggle theme">
+                    <i class="bi bi-sun-fill"></i>
+                </button>
+                <button class="btn-lang" id="btn-lang" aria-label="Toggle language">
+                    <span>PT</span>
+                </button>
+                <div class="header-cta">
+                    <a href="#form">
+                        <button data-i18n="nav-contact">Contact</button>
+                    </a>
+                </div>
+                <div class="btn-open-menu" id="btn-menu">
+                    <i class="bi bi-list"></i>
+                </div>
             </div>
 
             <div class="menu-mobile" id="menu-mobile">
-                <div class="btn-close">
+                <div class="btn-close" id="btn-close">
                     <i class="bi bi-x-lg"></i>
-                </div> <!-- btn-close -->
-
+                </div>
                 <nav class="menu-mobile-nav">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#specialties">Specialties</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#portfolio">Projects</a></li>
-                        <li><a href="#form">Contact</a></li>
+                        <li><a href="#" data-i18n="nav-home">Home</a></li>
+                        <li><a href="#specialties" data-i18n="nav-specialties">Specialties</a></li>
+                        <li><a href="#about" data-i18n="nav-about">About</a></li>
+                        <li><a href="#sap">SAP</a></li>
+                        <li><a href="#portfolio" data-i18n="nav-projects">Projects</a></li>
+                        <li><a href="#form" data-i18n="nav-contact">Contact</a></li>
                     </ul>
+                </nav>
+            </div>
 
-            </div><!-- menu-mobile -->
-
-            <div class="overlay-menu" id="overlay-menu">
-
-            </div> <!-- overlay-menu -->
-
-        </div><!-- interface -->
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div>
     </header>
-    
+
     <main>
-        <section class="top-site" >
+        <!-- HERO -->
+        <section class="top-site">
+            <div class="hero-blobs" aria-hidden="true">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+            </div>
             <div class="interface">
                 <div class="flex">
                     <div class="txt-top-site">
-                        <h1>MAKING DIGITAL IDEAS COME TRUE<span>.</span></h1>
-                        <p>Crafting immersive digital worlds by weaving code with creativity. I'm a full-stack developer 
-                            I love to create beautiful and functional websites and applications 
-                            sculpting seamless user experiences. Let's turn your vision into a captivating digital reality.</p>
-                            <div class="btn-contact">
-                                <a href="#">
-                                    <button>Get in Touch</button>
-                                </a>
-                            </div>
-                    </div><!-- txt-top-site -->
-                    <div class="img-top-site">
-                        <img src="img/me.png" alt="My Photo">
-                    </div><!-- img-top-site -->
-                </div>
-            </div><!-- interface -->
-        </section><!-- top-site -->
-
-        <section class="specialties" id="specialties">
-            <div class="interface">
-                <h2 class="title">MY <span>SPECIALTIES.</span></h2>
-                <div class="flex">
-                    <div class="specialties-box">
-                        <i class="bi bi-code-slash"></i>
-                        <h3>Front-end</h3>
-                        <p>Creating beautiful and functional websites and applications with HTML/CSS and JavaScript.</p>
-                    </div> <!-- specialties-box -->
-
-                    <div class="specialties-box">
-                        <i class="bi bi-database-fill-gear"></i>
-                        <h3>Back-end</h3>
-                        <p>Building robust and scalable back-end systems with Typescript, Node and SQL.</p>
-                    </div> <!-- specialties-box -->
-
-                    <div class="specialties-box">
-                        <i class="bi bi-robot"></i>
-                        <h3>Prompt Engineering</h3> 
-                        <p>Creating effective creative chatbot prompts and beautiful stunning AI images.</p>
-                    </div> <!-- specialties-box -->
-
-                </div> <!-- flex -->
-
-            </div> <!-- interface -->
-
-        </section> <!-- specialities -->
-
-        <section class="about" id="about">
-            <div class="interface" >
-                <div class="flex">
-                    <div class="about-img">
-                        <img src="img/me2.jpeg" alt="My Photo">
-                    </div> <!-- about-img -->
-                    <div class="about-txt">
-                        <h2 class="title">HELLO THERE,<span>I AM LUCAS JAQUES.</span></h2>
-
-                        <p>Hi, I'm Lucas Jaques, a full-stack developer based in Brazil. I have a passion for creating beautiful
-                             and functional websites and applications. I'm a self-taught developer and I'm always looking for new challenges
-                              and opportunities to learn and grow.</p>
-
-                        <p>When I'm not coding, you can find me playing video games, watching movies, or animes.</p>
-
-                        <div class="btn-social">
-                            <a href="https://www.linkedin.com/in/jaqueslucas/?locale=en_US">
-                                <button><i class="bi bi-linkedin"></i></button>
-                            </a>
-                            <a href="https://github.com/jaqueslucas">
-                                <button><i class="bi bi-github"></i></button>
-                            </a>
-                            <a href="https://www.upwork.com/freelancers/~01cd2c93b23bf148a6">
-                                <button><i class="bi bi-person-workspace"></i></button>
+                        <h1><span data-i18n="hero-title">MAKING DIGITAL IDEAS COME TRUE</span><span class="gold">.</span></h1>
+                        <p data-i18n="hero-desc">Crafting immersive digital worlds by weaving code with creativity. I'm a full-stack developer and SAP BTP specialist. Let's turn your vision into captivating digital reality.</p>
+                        <div class="btn-cta">
+                            <a href="#form">
+                                <button data-i18n="hero-btn">Get in Touch</button>
                             </a>
                         </div>
-                    </div> <!-- about-txt -->
-                </div> <!-- flex -->
-            </div> <!-- interface -->
-        </section> <!-- about -->
-
-        <section class="portfolio" id="portfolio">
-            <div class="interface">
-                <h2 class="title">MY <span>PORTFOLIO.</span></h2>
-                <div class="flex">
-                    <div class="img-port" style="background-image: url(img/site1.png);">
-                        <a href="https://jaqueslucas.github.io/TinCat-Project/"><div class="overlay">Tincat Website</div></a>
                     </div>
-                    <div class="img-port" style="background-image: url(img/candago.png);">
-                        <a href="https://l-gustavo-barbosa.github.io/candagoScrum/"><div class="overlay">Candago Scrum</div></a>
-                    </div>
-                    <div class="img-port-gif" style="background-image: url(img/simon.gif);">
-                        <a href="https://jaqueslucas.github.io/Simon-the-game/"><div class="overlay">Simon The Game</div></a>
+                    <div class="img-top-site">
+                        <img src="img/me.png" alt="My Photo">
                     </div>
                 </div>
             </div>
-        </section><!-- portfolio -->
+        </section>
 
+        <!-- MARQUEE -->
+        <div class="marquee-section" aria-hidden="true">
+            <div class="marquee-overflow">
+                <div class="marquee-track">
+                    <span>React</span><span class="sep">·</span><span>TypeScript</span><span class="sep">·</span><span>Node.js</span><span class="sep">·</span><span>SAP BTP</span><span class="sep">·</span><span>SAP CAP</span><span class="sep">·</span><span>Python</span><span class="sep">·</span><span>FastAPI</span><span class="sep">·</span><span>MongoDB</span><span class="sep">·</span><span>PostgreSQL</span><span class="sep">·</span><span>Docker</span><span class="sep">·</span><span>ABAP</span><span class="sep">·</span><span>TensorFlow</span><span class="sep">·</span><span>Azure</span><span class="sep">·</span><span>Expo</span><span class="sep">·</span><span>MQTT</span><span class="sep">·</span><span>OData</span><span class="sep">·</span><span>React</span><span class="sep">·</span><span>TypeScript</span><span class="sep">·</span><span>Node.js</span><span class="sep">·</span><span>SAP BTP</span><span class="sep">·</span><span>SAP CAP</span><span class="sep">·</span><span>Python</span><span class="sep">·</span><span>FastAPI</span><span class="sep">·</span><span>MongoDB</span><span class="sep">·</span><span>PostgreSQL</span><span class="sep">·</span><span>Docker</span><span class="sep">·</span><span>ABAP</span><span class="sep">·</span><span>TensorFlow</span><span class="sep">·</span><span>Azure</span><span class="sep">·</span><span>Expo</span><span class="sep">·</span><span>MQTT</span><span class="sep">·</span><span>OData</span><span class="sep">·</span>
+                </div>
+            </div>
+            <div class="marquee-overflow">
+                <div class="marquee-track marquee-reverse">
+                    <span>SAP Fiori</span><span class="sep">·</span><span>SAP S/4HANA</span><span class="sep">·</span><span>JavaScript</span><span class="sep">·</span><span>HTML/CSS</span><span class="sep">·</span><span>Express</span><span class="sep">·</span><span>Prisma</span><span class="sep">·</span><span>React Native</span><span class="sep">·</span><span>Git</span><span class="sep">·</span><span>REST APIs</span><span class="sep">·</span><span>NLP</span><span class="sep">·</span><span>Material UI</span><span class="sep">·</span><span>Vite</span><span class="sep">·</span><span>JWT</span><span class="sep">·</span><span>PostGIS</span><span class="sep">·</span><span>SAP Fiori</span><span class="sep">·</span><span>SAP S/4HANA</span><span class="sep">·</span><span>JavaScript</span><span class="sep">·</span><span>HTML/CSS</span><span class="sep">·</span><span>Express</span><span class="sep">·</span><span>Prisma</span><span class="sep">·</span><span>React Native</span><span class="sep">·</span><span>Git</span><span class="sep">·</span><span>REST APIs</span><span class="sep">·</span><span>NLP</span><span class="sep">·</span><span>Material UI</span><span class="sep">·</span><span>Vite</span><span class="sep">·</span><span>JWT</span><span class="sep">·</span><span>PostGIS</span><span class="sep">·</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SPECIALTIES -->
+        <section class="specialties" id="specialties">
+            <div class="interface">
+                <h2 class="title" data-i18n-html="specialties-heading">MY <span>SPECIALTIES.</span></h2>
+                <div class="specialties-grid">
+                    <div class="specialties-box fade-in">
+                        <i class="bi bi-code-slash"></i>
+                        <h3 data-i18n="spec-fe-title">Front-end</h3>
+                        <p data-i18n="spec-fe-desc">Creating beautiful and functional websites and applications with HTML/CSS and JavaScript.</p>
+                    </div>
+                    <div class="specialties-box fade-in">
+                        <i class="bi bi-database-fill-gear"></i>
+                        <h3 data-i18n="spec-be-title">Back-end</h3>
+                        <p data-i18n="spec-be-desc">Building robust and scalable back-end systems with TypeScript, Node.js and SQL.</p>
+                    </div>
+                    <div class="specialties-box fade-in">
+                        <i class="bi bi-robot"></i>
+                        <h3 data-i18n="spec-ai-title">Prompt Engineering</h3>
+                        <p data-i18n="spec-ai-desc">Creating effective creative chatbot prompts and stunning AI-generated visuals.</p>
+                    </div>
+                    <div class="specialties-box fade-in">
+                        <i class="bi bi-building-gear"></i>
+                        <h3 data-i18n="spec-sap-title">SAP / BTP Developer</h3>
+                        <p data-i18n="spec-sap-desc">Building enterprise integrations and cloud extensions on SAP BTP using CAP, OData and ABAP.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <div class="interface">
+                <div class="flex">
+                    <div class="about-img fade-in">
+                        <img src="img/me2.jpeg" alt="My Photo">
+                    </div>
+                    <div class="about-txt fade-in">
+                        <h2 class="title" data-i18n-html="about-heading">HELLO THERE,<span>I AM LUCAS JAQUES.</span></h2>
+                        <p data-i18n="about-p1">Hi, I'm Lucas Jaques, a full-stack developer and SAP BTP specialist based in Brazil. With hands-on experience in the SAP Cloud Application Programming (CAP) model and real-world integrations with SAP S/4HANA, I bridge the gap between enterprise systems and modern cloud solutions.</p>
+                        <p data-i18n="about-p2">When I'm not coding, you can find me playing video games, watching movies, or anime.</p>
+                        <div class="btn-social">
+                            <a href="https://www.linkedin.com/in/jaqueslucas/?locale=en_US" target="_blank" rel="noopener noreferrer">
+                                <button><i class="bi bi-linkedin"></i></button>
+                            </a>
+                            <a href="https://github.com/jaqueslucas" target="_blank" rel="noopener noreferrer">
+                                <button><i class="bi bi-github"></i></button>
+                            </a>
+                            <a href="https://www.upwork.com/freelancers/~01cd2c93b23bf148a6" target="_blank" rel="noopener noreferrer">
+                                <button><i class="bi bi-person-workspace"></i></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="stats-strip">
+            <div class="interface">
+                <div class="stats-grid">
+                    <div class="stat-item fade-in">
+                        <div class="stat-number-wrap">
+                            <span class="stat-number" data-target="6">0</span>
+                        </div>
+                        <p data-i18n="stat-abp">FATEC ABP Projects</p>
+                    </div>
+                    <div class="stat-item fade-in">
+                        <div class="stat-number-wrap">
+                            <span class="stat-number" data-target="1">0</span>
+                        </div>
+                        <p data-i18n="stat-cert">SAP Certification</p>
+                    </div>
+                    <div class="stat-item fade-in">
+                        <div class="stat-number-wrap">
+                            <span class="stat-number" data-target="1">0</span>
+                        </div>
+                        <p data-i18n="stat-client">Live SAP Client</p>
+                    </div>
+                    <div class="stat-item fade-in">
+                        <div class="stat-number-wrap">
+                            <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+                        </div>
+                        <p data-i18n="stat-years">Years of Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JOURNEY -->
+        <section class="timeline-section" id="journey">
+            <div class="interface">
+                <h2 class="title" data-i18n-html="timeline-heading">MY <span>JOURNEY.</span></h2>
+                <div class="timeline">
+
+                    <div class="tl-item tl-left fade-in">
+                        <div class="tl-dot"><i class="bi bi-mortarboard-fill"></i></div>
+                        <div class="tl-card">
+                            <span class="tl-year">2022</span>
+                            <h4 data-i18n="tl-1-title">FATEC Jacareí</h4>
+                            <p data-i18n="tl-1-desc">Started DSM — building the foundation for modern full-stack development.</p>
+                        </div>
+                    </div>
+
+                    <div class="tl-item tl-right fade-in">
+                        <div class="tl-dot"><i class="bi bi-code-slash"></i></div>
+                        <div class="tl-card">
+                            <span class="tl-year">2023</span>
+                            <h4 data-i18n="tl-2-title">Full-Stack ABPs</h4>
+                            <p data-i18n="tl-2-desc">2nd & 3rd semester projects with React, TypeScript, Node.js, PostgreSQL and MongoDB.</p>
+                        </div>
+                    </div>
+
+                    <div class="tl-item tl-left fade-in">
+                        <div class="tl-dot"><i class="bi bi-building-gear"></i></div>
+                        <div class="tl-card">
+                            <span class="tl-year">2024</span>
+                            <h4 data-i18n="tl-3-title">SAP Market Entry</h4>
+                            <p data-i18n="tl-3-desc">Joined the SAP ecosystem, specializing in SAP BTP and Cloud Application Programming Model.</p>
+                        </div>
+                    </div>
+
+                    <div class="tl-item tl-right fade-in">
+                        <div class="tl-dot"><i class="bi bi-patch-check-fill"></i></div>
+                        <div class="tl-card">
+                            <span class="tl-year">2024</span>
+                            <h4 data-i18n="tl-4-title">SAP CAP Certified</h4>
+                            <p data-i18n="tl-4-desc">Achieved SAP Certified Associate — Back-End Developer for Cloud Application Programming Model.</p>
+                        </div>
+                    </div>
+
+                    <div class="tl-item tl-left fade-in">
+                        <div class="tl-dot"><i class="bi bi-rocket-takeoff-fill"></i></div>
+                        <div class="tl-card">
+                            <span class="tl-year">2024–2025</span>
+                            <h4 data-i18n="tl-5-title">Live Client & Advanced ABPs</h4>
+                            <p data-i18n="tl-5-desc">Luma integration running in production for Vida Veg. Advanced ABPs featuring ML, IoT and AI/NLP.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SAP EXPERTISE -->
+        <section class="sap-section" id="sap">
+            <div class="interface">
+                <h2 class="title" data-i18n-html="sap-heading">SAP <span>EXPERTISE.</span></h2>
+                <p class="section-desc fade-in" data-i18n="sap-desc">Active SAP ecosystem professional with hands-on experience building cloud-native solutions on SAP BTP. Currently delivering real integration solutions for clients using SAP S/4HANA Public Edition.</p>
+
+                <div class="sap-grid">
+                    <div class="sap-card fade-in">
+                        <i class="bi bi-cloud-fill"></i>
+                        <h3>SAP BTP</h3>
+                        <p data-i18n="sap-btp-desc">Business Technology Platform — cloud-native apps and integrations</p>
+                    </div>
+                    <div class="sap-card fade-in">
+                        <i class="bi bi-code-square"></i>
+                        <h3>SAP CAP</h3>
+                        <p data-i18n="sap-cap-desc">Cloud Application Programming Model — certified developer</p>
+                    </div>
+                    <div class="sap-card fade-in">
+                        <i class="bi bi-building"></i>
+                        <h3>SAP S/4HANA</h3>
+                        <p data-i18n="sap-s4-desc">Public Edition integrations and extensions</p>
+                    </div>
+                    <div class="sap-card fade-in">
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <h3>SAP Fiori</h3>
+                        <p data-i18n="sap-fiori-desc">UI5 development and Fiori Elements customization</p>
+                    </div>
+                    <div class="sap-card fade-in">
+                        <i class="bi bi-file-earmark-code"></i>
+                        <h3>ABAP</h3>
+                        <p data-i18n="sap-abap-desc">Custom development and enhancement implementations</p>
+                    </div>
+                    <div class="sap-card fade-in">
+                        <i class="bi bi-arrow-left-right"></i>
+                        <h3>OData / REST</h3>
+                        <p data-i18n="sap-odata-desc">API design, integration and consumption</p>
+                    </div>
+                </div>
+
+                <!-- CERTIFICATION -->
+                <div class="cert-section">
+                    <h3 class="cert-heading" data-i18n-html="cert-heading">MY <span>CERTIFICATIONS.</span></h3>
+                    <div class="cert-card fade-in">
+                        <div class="cert-badge">
+                            <img src="https://www.credly.com/badges/80be82f6-8a67-4dff-bf53-d148c0e689c2/public_badge_image.png"
+                                 alt="SAP CAP Certification Badge"
+                                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+                            <div class="cert-badge-fallback">
+                                <i class="bi bi-patch-check-fill"></i>
+                            </div>
+                        </div>
+                        <div class="cert-info">
+                            <div class="cert-issuer-tag">SAP SE</div>
+                            <h4 data-i18n="cert-name">SAP Certified Associate</h4>
+                            <p data-i18n="cert-subtitle">Back-End Developer — SAP Cloud Application Programming Model</p>
+                            <a href="https://www.credly.com/badges/80be82f6-8a67-4dff-bf53-d148c0e689c2"
+                               target="_blank" rel="noopener noreferrer" class="cert-verify-btn">
+                                <i class="bi bi-patch-check-fill"></i>
+                                <span data-i18n="cert-verify">Verify Certificate</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLIENT HIGHLIGHT -->
+        <section class="client-section">
+            <div class="interface">
+                <div class="client-card fade-in">
+                    <div class="client-live">
+                        <span class="live-dot"></span>
+                        LIVE
+                    </div>
+                    <div class="client-icon">
+                        <i class="bi bi-shop-window"></i>
+                    </div>
+                    <div class="client-content">
+                        <h3 data-i18n="client-heading">Real Impact. Real Client.</h3>
+                        <p data-i18n="client-desc">Nota fiscal (NF-e) monitoring running live in SAP S/4HANA Public Edition. Enterprise integration for real — not just a demo.</p>
+                        <div class="client-facts">
+                            <div><i class="bi bi-check2-circle"></i><span data-i18n="cf-1">Production Environment</span></div>
+                            <div><i class="bi bi-check2-circle"></i><span>SAP S/4HANA Public Edition</span></div>
+                            <div><i class="bi bi-check2-circle"></i><span data-i18n="cf-3">NF-e Integration</span></div>
+                        </div>
+                    </div>
+                    <div class="client-name-badge">Vida Veg</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO -->
+        <section class="portfolio" id="portfolio">
+            <div class="interface">
+                <h2 class="title" data-i18n-html="portfolio-heading">MY <span>PORTFOLIO.</span></h2>
+
+                <!-- LUMA FEATURED -->
+                <div class="portfolio-featured fade-in">
+                    <div class="featured-card">
+                        <div class="featured-visual">
+                            <i class="bi bi-diagram-3-fill"></i>
+                            <div class="featured-glow"></div>
+                        </div>
+                        <div class="featured-info">
+                            <div class="featured-badge" data-i18n="featured-badge">Featured Project</div>
+                            <h3>Luma</h3>
+                            <p data-i18n="featured-desc">An ambitious SAP integration platform currently serving real clients. Delivers nota fiscal (NF-e) monitoring integrated directly into SAP S/4HANA Public Edition — with a pipeline of new integration capabilities in development.</p>
+                            <div class="tech-tags">
+                                <span>SAP CAP</span>
+                                <span>Node.js</span>
+                                <span>SAP BTP</span>
+                                <span>S/4HANA</span>
+                                <span>TypeScript</span>
+                            </div>
+                            <div class="featured-client">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span data-i18n="client-label">Live client:</span>&nbsp;Vida Veg
+                            </div>
+                            <div class="private-badge">
+                                <i class="bi bi-lock-fill"></i>
+                                <span data-i18n="private-label">Private Project</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FATEC ABPs — CANDAGO -->
+                <div class="fatec-section">
+                    <div class="fatec-header fade-in">
+                        <div class="fatec-badge-label">
+                            <i class="bi bi-mortarboard-fill"></i>
+                            <span data-i18n="fatec-tag">FATEC · Interdisciplinary Projects</span>
+                        </div>
+                        <h3 class="fatec-title" data-i18n-html="fatec-heading">CANDAGO <span>ABPs.</span></h3>
+                        <p data-i18n="fatec-desc">Projects developed at FATEC under the ABP (Project-Based Learning) methodology, in partnership with the Candago organization. Real systems built by real teams tackling real problems.</p>
+                    </div>
+                    <div class="fatec-grid">
+
+                        <!-- Candago Scrum — 1st semester -->
+                        <div class="fatec-card fatec-card-grad fade-in" style="--grad-a:#1a1105;--grad-b:#6b4510;">
+                            <div class="fatec-grad-icon"><i class="bi bi-kanban-fill"></i></div>
+                            <div class="fatec-card-content">
+                                <div class="fatec-sem-tag" data-i18n="sem-tag-1">1st Semester</div>
+                                <h4>Candago Scrum</h4>
+                                <p data-i18n="candago-scrum-desc">Scrum management platform — sprint planning, backlog and team collaboration.</p>
+                                <a href="https://l-gustavo-barbosa.github.io/candagoScrum/" target="_blank" rel="noopener noreferrer" class="fatec-link">
+                                    <i class="bi bi-box-arrow-up-right"></i>
+                                    <span data-i18n="view-project">View Project</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- CandaGO Tasks — 2nd semester -->
+                        <div class="fatec-card fatec-card-grad fade-in" style="--grad-a:#071a1f;--grad-b:#0c4f5e;">
+                            <div class="fatec-grad-icon"><i class="bi bi-briefcase-fill"></i></div>
+                            <div class="fatec-card-content">
+                                <div class="fatec-sem-tag" data-i18n="sem-tag-2">2nd Semester</div>
+                                <h4>CandaGO Tasks</h4>
+                                <p data-i18n="candago-2-desc">Project management platform — upload and manage projects, register team members, statistical reports and PDF data export.</p>
+                                <div class="fatec-tech-tags">
+                                    <span>React</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span>
+                                </div>
+                                <a href="https://github.com/candago-2" target="_blank" rel="noopener noreferrer" class="fatec-link">
+                                    <i class="bi bi-github"></i>
+                                    <span data-i18n="view-github">View on GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- CandaGO — 3rd semester -->
+                        <div class="fatec-card fatec-card-grad fade-in" style="--grad-a:#071f0e;--grad-b:#0f5c29;">
+                            <div class="fatec-grad-icon"><i class="bi bi-egg-fried"></i></div>
+                            <div class="fatec-card-content">
+                                <div class="fatec-sem-tag" data-i18n="sem-tag-3">3rd Semester</div>
+                                <h4>CandaGO</h4>
+                                <p data-i18n="candago-3-desc">Nutrition and health tracking app — meal registration, water intake, macronutrient monitoring and personal goal management.</p>
+                                <div class="fatec-tech-tags">
+                                    <span>React</span><span>TypeScript</span><span>Node.js</span><span>MongoDB</span>
+                                </div>
+                                <a href="https://github.com/candago-3" target="_blank" rel="noopener noreferrer" class="fatec-link">
+                                    <i class="bi bi-github"></i>
+                                    <span data-i18n="view-github">View on GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- CandaGO IoT — 4th semester -->
+                        <div class="fatec-card fatec-card-grad fade-in" style="--grad-a:#1f0e05;--grad-b:#7a3510;">
+                            <div class="fatec-grad-icon"><i class="bi bi-cpu-fill"></i></div>
+                            <div class="fatec-card-content">
+                                <div class="fatec-sem-tag" data-i18n="sem-tag-4">4th Semester</div>
+                                <h4>CandaGO IoT</h4>
+                                <p data-i18n="candago-4-desc">IoT monitoring mobile app — device telemetry collection via MQTT, real-time data visualization and Docker-containerized backend.</p>
+                                <div class="fatec-tech-tags">
+                                    <span>Expo</span><span>TypeScript</span><span>PostgreSQL</span><span>MQTT</span><span>Docker</span>
+                                </div>
+                                <a href="https://github.com/candago-4" target="_blank" rel="noopener noreferrer" class="fatec-link">
+                                    <i class="bi bi-github"></i>
+                                    <span data-i18n="view-github">View on GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- DogSpotter — 5th semester -->
+                        <div class="fatec-card fatec-card-grad fade-in" style="--grad-a:#07101f;--grad-b:#0f3a6e;">
+                            <div class="fatec-grad-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div class="fatec-card-content">
+                                <div class="fatec-sem-tag" data-i18n="sem-tag-5">5th Semester</div>
+                                <h4>DogSpotter</h4>
+                                <p data-i18n="candago-5-desc">Mobile platform for registering and finding lost dogs — geolocation, camera and AI-powered breed classification with 120+ breeds.</p>
+                                <div class="fatec-tech-tags">
+                                    <span>React Native</span><span>TypeScript</span><span>PostgreSQL</span><span>TensorFlow</span><span>Azure</span>
+                                </div>
+                                <a href="https://github.com/candago-5" target="_blank" rel="noopener noreferrer" class="fatec-link">
+                                    <i class="bi bi-github"></i>
+                                    <span data-i18n="view-github">View on GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Procon Assistant — 6th semester -->
+                        <div class="fatec-card fatec-card-grad fade-in" style="--grad-a:#120720;--grad-b:#4a1275;">
+                            <div class="fatec-grad-icon"><i class="bi bi-chat-dots-fill"></i></div>
+                            <div class="fatec-card-content">
+                                <div class="fatec-sem-tag" data-i18n="sem-tag-6">6th Semester</div>
+                                <h4>Procon Assistant</h4>
+                                <p data-i18n="candago-6-desc">AI-powered WhatsApp chatbot for Procon de Jacareí — automates complaint intake, consumer rights guidance and intelligent routing with human escalation.</p>
+                                <div class="fatec-tech-tags">
+                                    <span>Python</span><span>FastAPI</span><span>Docker</span><span>NLP</span>
+                                </div>
+                                <a href="https://github.com/candago-6" target="_blank" rel="noopener noreferrer" class="fatec-link">
+                                    <i class="bi bi-github"></i>
+                                    <span data-i18n="view-github">View on GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- OTHER PROJECTS -->
+                <div class="other-projects-label fade-in" data-i18n="other-projects-label">Other Projects</div>
+                <div class="flex portfolio-grid">
+                    <div class="img-port fade-in" style="background-image: url(img/site1.png);">
+                        <a href="https://jaqueslucas.github.io/TinCat-Project/" target="_blank" rel="noopener noreferrer">
+                            <div class="overlay">TinCat Website</div>
+                        </a>
+                    </div>
+                    <div class="img-port-gif fade-in" style="background-image: url(img/simon.gif);">
+                        <a href="https://jaqueslucas.github.io/Simon-the-game/" target="_blank" rel="noopener noreferrer">
+                            <div class="overlay">Simon The Game</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
         <section class="form" id="form">
             <div class="interface">
-                <h2 class="title">TALK <span>TO ME.</span></h2>
-
+                <h2 class="title" data-i18n-html="contact-heading">TALK <span>TO ME.</span></h2>
                 <form action="https://api.staticforms.xyz/submit" method="post">
-                    <input type="text" name="name" id="name" placeholder="Name" required>
-                    <input type="email" name="email" id="email" placeholder="Email" required>
-                    <input type="text" name="number" id="number" placeholder="Number">
-                    <textarea name="message" placeholder="Message"></textarea>
+                    <input type="text" name="name" id="name" data-i18n-placeholder="form-name" placeholder="Name" required>
+                    <input type="email" name="email" id="email" data-i18n-placeholder="form-email" placeholder="Email" required>
+                    <input type="text" name="number" id="number" data-i18n-placeholder="form-phone" placeholder="Number">
+                    <textarea name="message" data-i18n-placeholder="form-message" placeholder="Message"></textarea>
                     <input type="hidden" name="accessKey" value="8587b4a9-12fe-4fab-b9cd-a5ea950fd9d4">
                     <input type="hidden" name="redirectTo" value="https://jaqueslucas.github.io/Portfolio/message">
-                    <div class="btn-submit"><input type="submit" value="SUBMIT"></div>
+                    <div class="btn-submit"><input type="submit" data-i18n-value="form-submit" value="SUBMIT"></div>
                 </form>
-            </div> <!-- interface -->
-        </section> <!-- form -->
-
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -193,27 +533,27 @@
             <div class="line-footer">
                 <div class="flex">
                     <div class="footer-logo">
-                            <img src="img/logo.png" alt="Logo Lucas Jaques">
-                    </div> <!-- footer-logo -->
+                        <img src="img/logo.png" alt="Logo Lucas Jaques">
+                    </div>
                     <div class="btn-social">
-                        <a href="https://www.linkedin.com/in/jaqueslucas/?locale=en_US"> 
+                        <a href="https://www.linkedin.com/in/jaqueslucas/?locale=en_US" target="_blank" rel="noopener noreferrer">
                             <button><i class="bi bi-linkedin"></i></button>
                         </a>
-                        <a href="https://github.com/jaqueslucas">
+                        <a href="https://github.com/jaqueslucas" target="_blank" rel="noopener noreferrer">
                             <button><i class="bi bi-github"></i></button>
                         </a>
-                        <a href="https://www.upwork.com/freelancers/~01cd2c93b23bf148a6">
+                        <a href="https://www.upwork.com/freelancers/~01cd2c93b23bf148a6" target="_blank" rel="noopener noreferrer">
                             <button><i class="bi bi-person-workspace"></i></button>
                         </a>
-                    </div> <!-- btn-social -->
-            </div> <!-- line-footer -->
-            </div> <!-- flex -->
-
+                    </div>
+                </div>
+            </div>
             <div class="line-footer border">
                 <p><i class="bi bi-envelope-at-fill"></i> <a href="mailto:lucassouza2347@hotmail.com">lucassouza2347@hotmail.com</a></p>
-            </div> <!-- line-footer -->
-        </div> <!-- interface -->
+            </div>
+        </div>
     </footer>
-<script src="index.js"></script>
+
+    <script src="index.js"></script>
 </body>
 </html>

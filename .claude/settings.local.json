@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\jaqueslucas\\\\workspace\\\\ra2581392323033\" -Recurse)",
+      "Bash(Select-Object FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(start *)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:api.github.com)",
+      "Skill(update-config)",
+      "Bash(gh api *)",
+      "WebFetch(domain:raw.githubusercontent.com)"
+    ]
+  }
+}
