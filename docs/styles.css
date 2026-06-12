@@ -39,6 +39,38 @@
     src: url('fonts/poppins-800.woff2') format('woff2');
 }
 
+@font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('fonts/fraunces-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    font-style: italic;
+    font-weight: 600;
+    font-display: swap;
+    src: url('fonts/fraunces-600-italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('fonts/fraunces-900.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    font-style: italic;
+    font-weight: 900;
+    font-display: swap;
+    src: url('fonts/fraunces-900-italic.woff2') format('woff2');
+}
+
 /* ===== CSS CUSTOM PROPERTIES ===== */
 :root {
     --bg: #000000;
@@ -1799,4 +1831,399 @@ section.top-site > .interface {
 .fatec-contrib strong {
     color: var(--accent);
     font-weight: 600;
+}
+
+/* ============================================================
+   VISUAL REFINEMENTS — editorial gold
+   ============================================================ */
+
+/* --- Display typography (Fraunces) --- */
+h1.title,
+h2.title,
+.cert-heading,
+.fatec-title,
+.about .about-txt h2,
+.top-site h1,
+.top-site h1 span,
+.featured-info h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
+
+h1.title span,
+h2.title span,
+.cert-heading span,
+.fatec-title span {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+h2.title {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.12;
+}
+
+.top-site h1 {
+    font-size: clamp(34px, 5.2vw, 70px);
+    line-height: 1.05;
+}
+
+.about .about-txt h2 {
+    font-size: clamp(30px, 3.4vw, 44px);
+    line-height: 1.08;
+}
+
+.about .about-txt h2 span {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+}
+
+/* --- Grain overlay --- */
+body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 99990;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+[data-theme="light"] body::after {
+    opacity: 0.035;
+}
+
+/* --- Scroll progress bar --- */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+    box-shadow: 0 0 8px var(--shadow-glow);
+    z-index: 100000;
+    pointer-events: none;
+}
+
+/* --- Glass header --- */
+header {
+    background-color: color-mix(in srgb, var(--bg) 78%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+header.scrolled {
+    box-shadow: 0 10px 34px rgba(0, 0, 0, 0.22);
+}
+
+header nav.menu-desktop a {
+    position: relative;
+}
+
+header nav.menu-desktop a:hover {
+    transform: none;
+}
+
+header nav.menu-desktop a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.35s ease;
+}
+
+header nav.menu-desktop a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* --- Section kickers --- */
+.kicker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: var(--accent);
+    margin-bottom: 16px;
+    font-variant-numeric: tabular-nums;
+}
+
+.kicker::before,
+.kicker::after {
+    content: '';
+    height: 1px;
+    width: 46px;
+}
+
+.kicker::before {
+    background: linear-gradient(90deg, transparent, var(--accent));
+}
+
+.kicker::after {
+    background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.kicker.kicker-left {
+    justify-content: flex-start;
+}
+
+.kicker.kicker-left::before {
+    display: none;
+}
+
+/* --- Hero availability badge + atmosphere --- */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 7px 16px;
+    border: 1px solid rgba(236, 186, 14, 0.35);
+    border-radius: 30px;
+    background: rgba(236, 186, 14, 0.07);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    margin-bottom: 24px;
+    animation: heroFadeUp 0.9s ease both;
+}
+
+.hero-badge .badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4caf50;
+    flex-shrink: 0;
+    animation: livePulse 1.8s ease-in-out infinite;
+}
+
+section.top-site::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, transparent 72%);
+    mask-image: radial-gradient(ellipse at center, #000 0%, transparent 72%);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.top-site .img-top-site {
+    position: relative;
+}
+
+.top-site .img-top-site::before {
+    content: '';
+    position: absolute;
+    inset: -34px;
+    background: radial-gradient(circle at 50% 45%, rgba(236, 186, 14, 0.16), transparent 65%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- Button shine sweep --- */
+.btn-cta button,
+.header-cta button,
+.cert-verify-btn,
+.fatec-link,
+.contact-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-cta button::after,
+.header-cta button::after,
+.cert-verify-btn::after,
+.fatec-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -85%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.55s ease;
+    pointer-events: none;
+}
+
+.btn-cta button:hover::after,
+.header-cta button:hover::after,
+.cert-verify-btn:hover::after,
+.fatec-link:hover::after {
+    left: 135%;
+}
+
+/* --- Card top accent line --- */
+.specialties .specialties-box,
+.sap-card,
+.tl-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.specialties .specialties-box::before,
+.sap-card::before,
+.tl-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    transform: scaleX(0);
+    transition: transform 0.45s ease;
+}
+
+.specialties .specialties-box:hover::before,
+.sap-card:hover::before,
+.tl-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* --- Stats: serif gradient numerals --- */
+.stat-number,
+.stat-suffix {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 900;
+    background: linear-gradient(180deg, #ffe9a3 0%, var(--accent) 55%, var(--accent-dark) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .stat-number,
+[data-theme="light"] .stat-suffix {
+    background: linear-gradient(180deg, var(--accent) 0%, var(--accent-dark) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* --- Certification card: gradient border --- */
+.cert-card {
+    border: 1px solid transparent;
+    background:
+        linear-gradient(135deg, var(--bg-card) 0%, var(--bg) 100%) padding-box,
+        linear-gradient(120deg, var(--accent) 0%, rgba(236, 186, 14, 0.18) 45%, var(--accent-dark) 100%) border-box;
+}
+
+/* --- Marquee edge fade --- */
+.marquee-section {
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    border-top: 0;
+    border-bottom: 0;
+}
+
+/* --- Reveal with blur --- */
+.fade-in {
+    filter: blur(6px);
+    transition: opacity 0.65s ease, transform 0.65s ease, filter 0.65s ease;
+}
+
+.fade-in.visible {
+    filter: blur(0);
+}
+
+/* --- Footer tagline --- */
+.footer-tagline {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.footer-tagline p {
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 22px;
+}
+
+.footer-tagline .footer-copy {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    color: var(--accent);
+    margin-top: 4px;
+}
+
+/* --- Selection & scrollbar --- */
+::selection {
+    background: var(--accent);
+    color: #000;
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+    border-radius: 10px;
+    border: 3px solid var(--bg-2);
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .fade-in {
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+}
+
+/* --- Mobile fixes --- */
+html,
+body {
+    overflow-x: hidden;
+}
+
+@media (max-width: 700px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px 0;
+    }
+
+    .stat-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .stat-number {
+        font-size: 46px;
+    }
+
+    .stat-suffix {
+        font-size: 30px;
+    }
 }

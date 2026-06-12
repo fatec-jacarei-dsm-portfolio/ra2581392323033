@@ -6,6 +6,7 @@ const translations = {
         'nav-about': 'About',
         'nav-projects': 'Projects',
         'nav-contact': 'Contact',
+        'hero-badge': 'Open to new opportunities',
         'hero-title': 'MAKING DIGITAL IDEAS COME TRUE',
         'hero-desc': "Crafting immersive digital worlds by weaving code with creativity. I'm a full-stack developer and SAP BTP specialist. Let's turn your vision into captivating digital reality.",
         'hero-btn': 'Get in Touch',
@@ -84,6 +85,7 @@ const translations = {
         'cf-3': 'NF-e Integration',
         'contact-heading': 'TALK <span>TO ME.</span>',
         'contact-desc': 'You can reach me through my professional networks:',
+        'footer-tagline': 'Built with pure HTML, CSS & JavaScript — no frameworks.',
     },
     pt: {
         'nav-home': 'Início',
@@ -91,6 +93,7 @@ const translations = {
         'nav-about': 'Sobre',
         'nav-projects': 'Projetos',
         'nav-contact': 'Contato',
+        'hero-badge': 'Aberto a novas oportunidades',
         'hero-title': 'TRANSFORMANDO IDEIAS DIGITAIS EM REALIDADE',
         'hero-desc': 'Criando mundos digitais imersivos unindo código com criatividade. Sou desenvolvedor full-stack e especialista em SAP BTP. Vamos transformar sua visão em realidade digital.',
         'hero-btn': 'Entre em Contato',
@@ -169,6 +172,7 @@ const translations = {
         'cf-3': 'Integração NF-e',
         'contact-heading': 'FALE <span>COMIGO.</span>',
         'contact-desc': 'Você pode falar comigo pelas minhas redes profissionais:',
+        'footer-tagline': 'Feito com HTML, CSS e JavaScript puros — sem frameworks.',
     }
 };
 
@@ -271,6 +275,19 @@ overlay.addEventListener('click', () => menu.classList.remove('active'));
 document.querySelectorAll('.menu-mobile-nav a').forEach(link => {
     link.addEventListener('click', () => menu.classList.remove('active'));
 });
+
+// ===== SCROLL PROGRESS & HEADER =====
+const progressBar = document.getElementById('scroll-progress');
+const headerEl = document.querySelector('header');
+
+function onScroll() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+    headerEl.classList.toggle('scrolled', window.scrollY > 10);
+}
+
+document.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
 // ===== SCROLL ANIMATIONS =====
 const observer = new IntersectionObserver((entries) => {
