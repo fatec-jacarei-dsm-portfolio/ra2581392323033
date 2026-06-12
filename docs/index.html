@@ -5,14 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Lucas Jaques</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
 </head>
 <body>
     <div class="cursor-glow" id="cursor-glow"></div>
@@ -42,7 +39,7 @@
                     <span>PT</span>
                 </button>
                 <div class="header-cta">
-                    <a href="#form">
+                    <a href="#contact">
                         <button data-i18n="nav-contact">Contact</button>
                     </a>
                 </div>
@@ -62,7 +59,7 @@
                         <li><a href="#about" data-i18n="nav-about">About</a></li>
                         <li><a href="#sap">SAP</a></li>
                         <li><a href="#portfolio" data-i18n="nav-projects">Projects</a></li>
-                        <li><a href="#form" data-i18n="nav-contact">Contact</a></li>
+                        <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -85,7 +82,7 @@
                         <h1><span data-i18n="hero-title">MAKING DIGITAL IDEAS COME TRUE</span><span class="gold">.</span></h1>
                         <p data-i18n="hero-desc">Crafting immersive digital worlds by weaving code with creativity. I'm a full-stack developer and SAP BTP specialist. Let's turn your vision into captivating digital reality.</p>
                         <div class="btn-cta">
-                            <a href="#form">
+                            <a href="#contact">
                                 <button data-i18n="hero-btn">Get in Touch</button>
                             </a>
                         </div>
@@ -157,9 +154,6 @@
                             </a>
                             <a href="https://github.com/jaqueslucas" target="_blank" rel="noopener noreferrer">
                                 <button><i class="bi bi-github"></i></button>
-                            </a>
-                            <a href="https://www.upwork.com/freelancers/~01cd2c93b23bf148a6" target="_blank" rel="noopener noreferrer">
-                                <button><i class="bi bi-person-workspace"></i></button>
                             </a>
                         </div>
                     </div>
@@ -298,7 +292,7 @@
                     <h3 class="cert-heading" data-i18n-html="cert-heading">MY <span>CERTIFICATIONS.</span></h3>
                     <div class="cert-card fade-in">
                         <div class="cert-badge">
-                            <img src="https://www.credly.com/badges/80be82f6-8a67-4dff-bf53-d148c0e689c2/public_badge_image.png"
+                            <img src="img/cert-sap-cap.png"
                                  alt="SAP CAP Certification Badge"
                                  onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                             <div class="cert-badge-fallback">
@@ -396,12 +390,13 @@
                         <div class="fatec-card fatec-card-grad fade-in" style="--grad-a:#1a1105;--grad-b:#6b4510;">
                             <div class="fatec-grad-icon"><i class="bi bi-kanban-fill"></i></div>
                             <div class="fatec-card-content">
-                                <div class="fatec-sem-tag" data-i18n="sem-tag-1">1st Semester</div>
+                                <div class="fatec-sem-tag" data-i18n="sem-tag-1">1DSM – 2nd Sem. 2022</div>
                                 <h4>Candago Scrum</h4>
                                 <p data-i18n="candago-scrum-desc">Scrum management platform — sprint planning, backlog and team collaboration.</p>
-                                <a href="https://l-gustavo-barbosa.github.io/candagoScrum/" target="_blank" rel="noopener noreferrer" class="fatec-link">
-                                    <i class="bi bi-box-arrow-up-right"></i>
-                                    <span data-i18n="view-project">View Project</span>
+                                <p class="fatec-contrib"><strong data-i18n="contrib-label">My contribution:</strong> <span data-i18n="candago-scrum-contrib">Front-end development with HTML, CSS and JavaScript and participation in the team's Scrum ceremonies.</span></p>
+                                <a href="https://github.com/L-Gustavo-Barbosa/candagoScrum" target="_blank" rel="noopener noreferrer" class="fatec-link">
+                                    <i class="bi bi-github"></i>
+                                    <span data-i18n="view-github">View on GitHub</span>
                                 </a>
                             </div>
                         </div>
@@ -410,9 +405,10 @@
                         <div class="fatec-card fatec-card-grad fade-in" style="--grad-a:#071a1f;--grad-b:#0c4f5e;">
                             <div class="fatec-grad-icon"><i class="bi bi-briefcase-fill"></i></div>
                             <div class="fatec-card-content">
-                                <div class="fatec-sem-tag" data-i18n="sem-tag-2">2nd Semester</div>
+                                <div class="fatec-sem-tag" data-i18n="sem-tag-2">2DSM – 1st Sem. 2023</div>
                                 <h4>CandaGO Tasks</h4>
                                 <p data-i18n="candago-2-desc">Project management platform — upload and manage projects, register team members, statistical reports and PDF data export.</p>
+                                <p class="fatec-contrib"><strong data-i18n="contrib-label">My contribution:</strong> <span data-i18n="candago-2-contrib">Full-stack work — building the React front-end and the Node.js REST API with PostgreSQL.</span></p>
                                 <div class="fatec-tech-tags">
                                     <span>React</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span>
                                 </div>
@@ -427,9 +423,10 @@
                         <div class="fatec-card fatec-card-grad fade-in" style="--grad-a:#071f0e;--grad-b:#0f5c29;">
                             <div class="fatec-grad-icon"><i class="bi bi-egg-fried"></i></div>
                             <div class="fatec-card-content">
-                                <div class="fatec-sem-tag" data-i18n="sem-tag-3">3rd Semester</div>
+                                <div class="fatec-sem-tag" data-i18n="sem-tag-3">3DSM – 2nd Sem. 2023</div>
                                 <h4>CandaGO</h4>
                                 <p data-i18n="candago-3-desc">Nutrition and health tracking app — meal registration, water intake, macronutrient monitoring and personal goal management.</p>
+                                <p class="fatec-contrib"><strong data-i18n="contrib-label">My contribution:</strong> <span data-i18n="candago-3-contrib">Front-end development with React and TypeScript and integration with the Node.js/MongoDB API.</span></p>
                                 <div class="fatec-tech-tags">
                                     <span>React</span><span>TypeScript</span><span>Node.js</span><span>MongoDB</span>
                                 </div>
@@ -444,9 +441,10 @@
                         <div class="fatec-card fatec-card-grad fade-in" style="--grad-a:#1f0e05;--grad-b:#7a3510;">
                             <div class="fatec-grad-icon"><i class="bi bi-cpu-fill"></i></div>
                             <div class="fatec-card-content">
-                                <div class="fatec-sem-tag" data-i18n="sem-tag-4">4th Semester</div>
+                                <div class="fatec-sem-tag" data-i18n="sem-tag-4">4DSM – 1st Sem. 2024</div>
                                 <h4>CandaGO IoT</h4>
                                 <p data-i18n="candago-4-desc">IoT monitoring mobile app — device telemetry collection via MQTT, real-time data visualization and Docker-containerized backend.</p>
+                                <p class="fatec-contrib"><strong data-i18n="contrib-label">My contribution:</strong> <span data-i18n="candago-4-contrib">Development of the Expo mobile app and integration of real-time telemetry via MQTT.</span></p>
                                 <div class="fatec-tech-tags">
                                     <span>Expo</span><span>TypeScript</span><span>PostgreSQL</span><span>MQTT</span><span>Docker</span>
                                 </div>
@@ -461,9 +459,10 @@
                         <div class="fatec-card fatec-card-grad fade-in" style="--grad-a:#07101f;--grad-b:#0f3a6e;">
                             <div class="fatec-grad-icon"><i class="bi bi-geo-alt-fill"></i></div>
                             <div class="fatec-card-content">
-                                <div class="fatec-sem-tag" data-i18n="sem-tag-5">5th Semester</div>
+                                <div class="fatec-sem-tag" data-i18n="sem-tag-5">5DSM – 2nd Sem. 2024</div>
                                 <h4>DogSpotter</h4>
                                 <p data-i18n="candago-5-desc">Mobile platform for registering and finding lost dogs — geolocation, camera and AI-powered breed classification with 120+ breeds.</p>
+                                <p class="fatec-contrib"><strong data-i18n="contrib-label">My contribution:</strong> <span data-i18n="candago-5-contrib">Development of the React Native app and integration of the TensorFlow breed-classification model.</span></p>
                                 <div class="fatec-tech-tags">
                                     <span>React Native</span><span>TypeScript</span><span>PostgreSQL</span><span>TensorFlow</span><span>Azure</span>
                                 </div>
@@ -478,9 +477,10 @@
                         <div class="fatec-card fatec-card-grad fade-in" style="--grad-a:#120720;--grad-b:#4a1275;">
                             <div class="fatec-grad-icon"><i class="bi bi-chat-dots-fill"></i></div>
                             <div class="fatec-card-content">
-                                <div class="fatec-sem-tag" data-i18n="sem-tag-6">6th Semester</div>
+                                <div class="fatec-sem-tag" data-i18n="sem-tag-6">6DSM – 1st Sem. 2025</div>
                                 <h4>Procon Assistant</h4>
                                 <p data-i18n="candago-6-desc">AI-powered WhatsApp chatbot for Procon de Jacareí — automates complaint intake, consumer rights guidance and intelligent routing with human escalation.</p>
+                                <p class="fatec-contrib"><strong data-i18n="contrib-label">My contribution:</strong> <span data-i18n="candago-6-contrib">Development of the chatbot conversation flows with Python/FastAPI and the NLP intent routing.</span></p>
                                 <div class="fatec-tech-tags">
                                     <span>Python</span><span>FastAPI</span><span>Docker</span><span>NLP</span>
                                 </div>
@@ -512,18 +512,20 @@
         </section>
 
         <!-- CONTACT -->
-        <section class="form" id="form">
+        <section class="form" id="contact">
             <div class="interface">
                 <h2 class="title" data-i18n-html="contact-heading">TALK <span>TO ME.</span></h2>
-                <form action="https://api.staticforms.xyz/submit" method="post">
-                    <input type="text" name="name" id="name" data-i18n-placeholder="form-name" placeholder="Name" required>
-                    <input type="email" name="email" id="email" data-i18n-placeholder="form-email" placeholder="Email" required>
-                    <input type="text" name="number" id="number" data-i18n-placeholder="form-phone" placeholder="Number">
-                    <textarea name="message" data-i18n-placeholder="form-message" placeholder="Message"></textarea>
-                    <input type="hidden" name="accessKey" value="8587b4a9-12fe-4fab-b9cd-a5ea950fd9d4">
-                    <input type="hidden" name="redirectTo" value="https://jaqueslucas.github.io/Portfolio/message">
-                    <div class="btn-submit"><input type="submit" data-i18n-value="form-submit" value="SUBMIT"></div>
-                </form>
+                <p class="contact-desc" data-i18n="contact-desc">You can reach me through my professional networks:</p>
+                <div class="contact-links">
+                    <a class="contact-link" href="https://github.com/jaqueslucas" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a class="contact-link" href="https://www.linkedin.com/in/jaqueslucas/" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -542,14 +544,8 @@
                         <a href="https://github.com/jaqueslucas" target="_blank" rel="noopener noreferrer">
                             <button><i class="bi bi-github"></i></button>
                         </a>
-                        <a href="https://www.upwork.com/freelancers/~01cd2c93b23bf148a6" target="_blank" rel="noopener noreferrer">
-                            <button><i class="bi bi-person-workspace"></i></button>
-                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="line-footer border">
-                <p><i class="bi bi-envelope-at-fill"></i> <a href="mailto:lucassouza2347@hotmail.com">lucassouza2347@hotmail.com</a></p>
             </div>
         </div>
     </footer>

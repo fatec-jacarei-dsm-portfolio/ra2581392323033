@@ -1,3 +1,44 @@
+/* ===== LOCAL FONTS (Poppins) ===== */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('fonts/poppins-300.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/poppins-400.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('fonts/poppins-600.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('fonts/poppins-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('fonts/poppins-800.woff2') format('woff2');
+}
+
 /* ===== CSS CUSTOM PROPERTIES ===== */
 :root {
     --bg: #000000;
@@ -1039,62 +1080,52 @@ section.portfolio {
     opacity: 1;
 }
 
-/* ===== CONTACT FORM ===== */
+/* ===== CONTACT ===== */
 section.form {
     padding: 80px 4%;
     background-color: var(--bg-2);
     transition: background-color 0.35s ease;
 }
 
-form {
-    max-width: 500px;
-    margin: 40px auto 0;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    background-color: var(--input-bg);
-    border: 1px solid var(--border);
-    outline: 0;
-    padding: 18px 16px;
-    border-radius: 15px;
-    color: var(--text);
-    font-size: 16px;
-    transition: border-color 0.2s, background-color 0.35s ease;
-}
-
-form input:focus,
-form textarea:focus {
-    border-color: var(--accent);
-}
-
-form textarea {
-    resize: none;
-    height: 200px;
-}
-
-form .btn-submit {
-    margin-top: 16px;
+.contact-desc {
     text-align: center;
+    max-width: 560px;
+    margin: 18px auto 0;
+    color: var(--text-muted);
 }
 
-form .btn-submit input {
-    width: 140px;
-    background-color: var(--accent);
-    color: #000;
-    font-weight: 700;
-    cursor: pointer;
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 32px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background-color: var(--bg-card);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
     transition: 0.2s;
-    border: 0;
 }
 
-form .btn-submit input:hover {
+.contact-link i {
+    font-size: 24px;
+    color: var(--accent);
+}
+
+.contact-link:hover {
+    border-color: var(--accent);
     box-shadow: 0 0 12px var(--shadow-glow);
-    transform: scale(1.08);
+    transform: translateY(-3px);
 }
 
 /* ===== FOOTER ===== */
@@ -1758,19 +1789,14 @@ section.top-site > .interface {
     }
 }
 
-/* ===== SUCCESS PAGE ===== */
-.message {
-    color: var(--text);
-    font-size: 18px;
-    text-align: center;
-    margin-top: 20px;
+/* ===== ABP PERSONAL CONTRIBUTION ===== */
+.fatec-contrib {
+    font-size: 13px;
+    margin-top: 10px;
+    color: var(--text-muted);
 }
 
-.messagesucesseful {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 160px 4%;
+.fatec-contrib strong {
+    color: var(--accent);
+    font-weight: 600;
 }
